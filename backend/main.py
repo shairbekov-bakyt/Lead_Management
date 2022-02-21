@@ -1,6 +1,8 @@
 from typing import List
 import fastapi as _fastapi
 import fastapi.security as _security
+import uvicorn
+
 
 import sqlalchemy.orm as _orm
 
@@ -90,3 +92,7 @@ async def update_lead(
 @app.get("/api")
 async def root():
     return {"message": "Awesome Leads Manager"}
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

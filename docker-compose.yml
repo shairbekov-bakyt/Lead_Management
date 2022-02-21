@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  backend:
+    container_name: fast_api
+    build: ./backend
+    command: ["python", "main.py"]
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - "8000:8000"
+    
+  frontend:
+    container_name: react
+    build: ./frontend
+    command: ["npm", "start"]
+    volumes:
+      - ./frontend:/app/frontend
+      - node-modules:/app/frontend/node_modules
+    ports:
+      - "3000:3000"
+
+volumes:
+  node-modules:

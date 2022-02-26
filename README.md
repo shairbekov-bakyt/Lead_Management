@@ -11,7 +11,7 @@
 
 ## git clone
 ```
-git clone https://github.com/ShairbekovBakyt/Lead_Management/
+git clone https://github.com/Shairbekov-Bakyt/Lead_Management/
 ```
 ## Run with docker 
 ```
